@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/jamesmoltoseo/Next-js-Boilerplate/compare/v1.0.3...v1.0.4) (2024-07-08)
+
+
+### Bug Fixes
+
+* removed toml file ([3fd20ea](https://github.com/jamesmoltoseo/Next-js-Boilerplate/commit/3fd20ea6c0670becfa1d82a84401af00e657a7d5))
+
 ## [1.0.3](https://github.com/jamesmoltoseo/Next-js-Boilerplate/compare/v1.0.2...v1.0.3) (2024-07-08)
 
 
