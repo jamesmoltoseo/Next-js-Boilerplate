@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/jamesmoltoseo/Next-js-Boilerplate/compare/v1.0.2...v1.0.3) (2024-07-08)
+
+
+### Bug Fixes
+
+* packages ([3e074f6](https://github.com/jamesmoltoseo/Next-js-Boilerplate/commit/3e074f6e37d13a5568802389bb5a782272898fc5))
+* removed unused functions ([644cd1b](https://github.com/jamesmoltoseo/Next-js-Boilerplate/commit/644cd1b039339dd8132a6b7094ba85fd42bd5f62))
+
 ## [1.0.2](https://github.com/jamesmoltoseo/Next-js-Boilerplate/compare/v1.0.1...v1.0.2) (2024-07-08)
 
 
