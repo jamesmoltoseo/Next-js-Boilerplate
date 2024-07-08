@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/jamesmoltoseo/Next-js-Boilerplate/compare/v1.0.4...v1.0.5) (2024-07-08)
+
+
+### Bug Fixes
+
+* removed requirements ([dc42737](https://github.com/jamesmoltoseo/Next-js-Boilerplate/commit/dc42737c05beddb9a6ecb005ecfc7d0a882d3349))
+* requirements txt ([687b493](https://github.com/jamesmoltoseo/Next-js-Boilerplate/commit/687b4935dad43636b88a8aec7ae067897c386a0a))
+
 ## [1.0.4](https://github.com/jamesmoltoseo/Next-js-Boilerplate/compare/v1.0.3...v1.0.4) (2024-07-08)
 
 
