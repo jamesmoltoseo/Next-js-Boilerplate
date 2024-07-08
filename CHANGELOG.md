@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/jamesmoltoseo/Next-js-Boilerplate/compare/v1.0.0...v1.0.1) (2024-07-08)
+
+
+### Bug Fixes
+
+* api ([18d43d9](https://github.com/jamesmoltoseo/Next-js-Boilerplate/commit/18d43d9cb9608493695c48fe42b9cb28b32c96fb))
+* logo sizing ([a372c02](https://github.com/jamesmoltoseo/Next-js-Boilerplate/commit/a372c02f45d79088d85f1b4c4b0cb3ae669076a0))
+* merge ([5537670](https://github.com/jamesmoltoseo/Next-js-Boilerplate/commit/553767092068ea86416ff8a95db9492d0a8981b5))
+
 # 1.0.0 (2024-07-06)
 
 
