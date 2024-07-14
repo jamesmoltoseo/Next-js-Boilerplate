@@ -1,7 +1,7 @@
 import { AppConfig } from '@/utils/AppConfig'
 import Footer from 'src/components/tailwind-ui/reusable/footer'
-import { useLocaleData } from '@/components/utilities/LocaleData'
-import AccessibleLink from '@/components/links/index'
+import { useLocaleData } from '@/components/custom/utilities/locale-data'
+import AccessibleLink from '@/components/custom/links/index'
 
 const BaseTemplate = (props: {
   leftNav: React.ReactNode

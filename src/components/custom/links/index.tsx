@@ -14,6 +14,7 @@ interface AccessibleLinksProps {
   id: string
   labelledby?: string
   describedby?: string
+  showLink?: boolean // Add showLink prop here
   children?: React.ReactNode
   data?: AccessibleLink[]
 }
@@ -22,6 +23,7 @@ const AccessibleLinks: React.FC<AccessibleLinksProps> = ({
   id,
   labelledby,
   describedby,
+  showLink, // Destructure showLink prop
   children,
   data,
 }) => {
@@ -33,6 +35,13 @@ const AccessibleLinks: React.FC<AccessibleLinksProps> = ({
 
   const ariaLabelledBy = labelledby ? { 'aria-labelledby': labelledby } : {}
   const ariaDescribedBy = describedby ? { 'aria-describedby': describedby } : {}
+
+  // Log link details if the console prop is true
+  if (showLink) {
+    console.log(
+      `\x1b[32mLink details - id: '${link.id}', href: '${link.href}', text: '${link.text}'\x1b[0m`
+    )
+  }
 
   return (
     <a

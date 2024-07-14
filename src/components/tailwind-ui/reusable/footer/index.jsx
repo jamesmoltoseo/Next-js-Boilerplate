@@ -1,14 +1,14 @@
 // From Tailwind UI Component: 4_column_with_company_mission_on_dark
 import { AppConfig } from '@/utils/AppConfig'
+import { useLocaleData } from '@/components/custom/utilities/locale-data'
 import { SvgIcon } from '@mui/material'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
-import { useLocaleData } from '@/components/utilities/LocaleData'
 
-import AccessibleLink from '@/components/links/index'
-import TextNoWrap from '@/components/text-no-wrap'
+import AccessibleLink from '@/components/custom/links/index'
+import TextNoWrap from '@/components/custom/utilities/text-no-wrap'
 
 const iconComponents = {
   facebook: FacebookIcon,
@@ -17,9 +17,10 @@ const iconComponents = {
   youtube: YouTubeIcon,
 }
 export default function Footer() {
-  const { getLoginItems } = useLocaleData()
-
-  const loginItems = getLoginItems()
+  const allLinkItems = [
+    ...useLocaleData().getLoginItems(),
+    ...useLocaleData().getSiteNavItems(),
+  ]
 
   return (
     <section>
@@ -30,7 +31,7 @@ export default function Footer() {
         <div className="pb-8 pt-16 sm:pt-2435;4 lg:pt-32">
           <div className="w-full lg:flex lg:justify-between gap-x-24">
             <div className="space-y-6">
-              <AccessibleLink id={'Homepage'} data={loginItems}>
+              <AccessibleLink id={'Homepage'} data={allLinkItems} showLink>
                 <img
                   //* FIX: use webp format */
                   src="/assets/images/logo/casa-dourada-dark.png"

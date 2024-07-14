@@ -1,7 +1,7 @@
 import { BaseTemplate } from '@/templates/BaseTemplate'
-import { useLocaleData } from '@/components/utilities/LocaleData'
+import { useLocaleData } from '@/components/custom/utilities/locale-data'
 import { Refresh } from '@mui/icons-material'
-import Button from '@/components/buttons'
+import Button from '@/components/custom/buttons'
 
 export default function Layout(props: { children: React.ReactNode }) {
   const { getSiteNavItems, getLoginItems } = useLocaleData()

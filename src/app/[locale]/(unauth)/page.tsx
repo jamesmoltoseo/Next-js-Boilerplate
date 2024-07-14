@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import FeatureImages from '@/components/tailwind-ui/reusable/feature-images'
 import CenteredAccordion from '@/components/tailwind-ui/reusable/accordion'
-import HighlightCasa from '@/components/utilities/TextManipulation/HighlightCasa'
+import HighlightCasa from '@/components/custom/utilities/TextManipulation/HighlightCasa'
 
 //** This data is for demo purposes - this data will come from Strapi */
 import faqs from 'public/data/home/faqs.json'
