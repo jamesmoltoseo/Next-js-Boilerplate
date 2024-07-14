@@ -5,11 +5,10 @@ import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
+import { useLocaleData } from '@/components/utilities/LocaleData'
 
 import AccessibleLink from '@/components/links/index'
-import accessibleLinks from 'public/data/global/links.json'
 import TextNoWrap from '@/components/text-no-wrap'
-import footerNavCols from 'public/data/footer/footer-nav.json'
 
 const iconComponents = {
   facebook: FacebookIcon,
@@ -17,18 +16,21 @@ const iconComponents = {
   twitter: TwitterIcon,
   youtube: YouTubeIcon,
 }
-
 export default function Footer() {
+  const { getLoginItems } = useLocaleData()
+
+  const loginItems = getLoginItems()
+
   return (
     <section>
       <div className="container">
         <h2 id="footer-heading" className="sr-only">
           Footer navigation
         </h2>
-        <div className="pb-8 pt-16 sm:pt-24 lg:pt-32">
+        <div className="pb-8 pt-16 sm:pt-2435;4 lg:pt-32">
           <div className="w-full lg:flex lg:justify-between gap-x-24">
             <div className="space-y-6">
-              <AccessibleLink data={accessibleLinks} id={'Sportsbook'}>
+              <AccessibleLink id={'Homepage'} data={loginItems}>
                 <img
                   //* FIX: use webp format */
                   src="/assets/images/logo/casa-dourada-dark.png"
@@ -37,6 +39,7 @@ export default function Footer() {
                   width={180}
                 />
               </AccessibleLink>
+              {/* ))} */}
               <p className="text-sm text-gray-300 max-w-[226px]">
                 &copy; Established in 2024, <TextNoWrap text="brand" /> is the
                 most trusted betting exchange and leading online casino.
@@ -67,7 +70,7 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 w-full">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 w-full">
               {footerNavCols.map((col) => (
                 <div key={col.title} className="mb-10 lg:mb-0">
                   <h3 className="leading-none">{col.title}</h3>
@@ -85,7 +88,7 @@ export default function Footer() {
                   </ul>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
           <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
             <p className="text-xs text-gray-400">

@@ -2,19 +2,30 @@ import { useTranslations } from 'next-intl'
 
 export const useLocaleData = () => {
   const t = useTranslations()
+  interface NavItem {
+    id: string
+    href: string
+    text: string
+    image: string
+  }
 
-  const getSiteNavItems = () => {
-    // This list of pages should come from br.json
+  interface LoginItem {
+    id: string
+    href: string
+    text: string
+  }
+
+  const getSiteNavItems = (): NavItem[] => {
     const siteNavItems = [
-      { name: 'Sportsbook' },
-      { name: 'LiveCasino' },
-      { name: 'CrashGames' },
-      { name: 'SlotGames' },
-      { name: 'SportsExchange' },
+      { id: 'Sportsbook', name: 'Sportsbook' },
+      { id: 'LiveCasino', name: 'LiveCasino' },
+      { id: 'CrashGames', name: 'CrashGames' },
+      { id: 'SlotGames', name: 'SlotGames' },
+      { id: 'SportsExchange', name: 'SportsExchange' },
     ] as const
 
-    // This does get the href, text and icon values from br.json
-    const siteNav = siteNavItems.map(({ name }) => ({
+    const siteNav = siteNavItems.map(({ id, name }) => ({
+      id, // Ensure id is included
       href: t(`${name}.href`),
       text: t(`${name}.site_nav_text`),
       image: t(`${name}.site_nav_icon`),
@@ -25,11 +36,15 @@ export const useLocaleData = () => {
     return siteNav
   }
 
-  // Login items should come from br.json
-  const getLoginItems = () => {
-    const loginItems = [{ name: 'Login' }, { name: 'Register' }] as const
+  const getLoginItems = (): LoginItem[] => {
+    const loginItems = [
+      { id: 'Homepage', name: 'Homepage' },
+      { id: 'Login', name: 'Login' },
+      { id: 'Register', name: 'Register' },
+    ] as const
 
-    const memberPages = loginItems.map(({ name }) => ({
+    const memberPages = loginItems.map(({ id, name }) => ({
+      id,
       href: t(`${name}.href`),
       text: t(`${name}.site_nav_text`),
     }))

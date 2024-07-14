@@ -3,7 +3,8 @@ import React from 'react'
 interface AccessibleLink {
   id: string
   href: string
-  meta_title?: string
+  text: string
+  image?: string
   label?: string
   labelledby?: string
   describedby?: string
@@ -11,22 +12,19 @@ interface AccessibleLink {
 
 interface AccessibleLinksProps {
   id: string
-  meta_title?: string
   labelledby?: string
   describedby?: string
   children?: React.ReactNode
-  data?: AccessibleLink[] // Make data optional
+  data?: AccessibleLink[]
 }
 
 const AccessibleLinks: React.FC<AccessibleLinksProps> = ({
   id,
-  meta_title,
   labelledby,
   describedby,
   children,
   data,
 }) => {
-  // Use optional chaining (?.) to safely access properties
   const link = data?.find((link) => link.id === id)
 
   if (!link) {
@@ -38,10 +36,11 @@ const AccessibleLinks: React.FC<AccessibleLinksProps> = ({
 
   return (
     <a
+      key={id} // Dynamically set the key using the id
       id={id}
       href={link.href}
-      title={meta_title}
-      aria-label={link.label}
+      // title={meta_title || link.text}
+      aria-label={link.label || link.text}
       {...ariaLabelledBy}
       {...ariaDescribedBy}
     >

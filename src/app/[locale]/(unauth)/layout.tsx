@@ -32,10 +32,10 @@ export default function Layout(props: { children: React.ReactNode }) {
     </>
   )
 
-  // Function to generate member nav items
-  const generateMemberNavItems = () => (
+  // Function to generate Login nav items
+  const generateLoginNavItems = () => (
     <>
-      {loginItems.map((item, index) => (
+      {loginItems.slice(1).map((item, index) => (
         <li key={index} className="-ml-2">
           <Button
             size="lg"
@@ -68,7 +68,7 @@ export default function Layout(props: { children: React.ReactNode }) {
           </li>
         </>
       }
-      rightNav={generateMemberNavItems()}
+      rightNav={generateLoginNavItems()}
       siteNav={generateMainNavItems()}
     >
       <div className="text-xl">{props.children}</div>
@@ -77,7 +77,7 @@ export default function Layout(props: { children: React.ReactNode }) {
       <nav className="hidden">
         <ul>
           {generateMainNavItems()}
-          {generateMemberNavItems()}
+          {generateLoginNavItems()}
         </ul>
       </nav>
     </BaseTemplate>

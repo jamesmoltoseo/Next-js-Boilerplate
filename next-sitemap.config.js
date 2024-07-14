@@ -1,4 +1,4 @@
-//** FIX: add to packages.json - "postbuild": "next-sitemap",
+//** FIX: when site goes live, add to packages.json - "postbuild": "next-sitemap",
 
 const fs = require('fs')
 const path = require('path')

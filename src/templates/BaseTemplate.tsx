@@ -1,5 +1,7 @@
 import { AppConfig } from '@/utils/AppConfig'
 import Footer from 'src/components/tailwind-ui/reusable/footer'
+import { useLocaleData } from '@/components/utilities/LocaleData'
+import AccessibleLink from '@/components/links/index'
 
 const BaseTemplate = (props: {
   leftNav: React.ReactNode
@@ -7,13 +9,16 @@ const BaseTemplate = (props: {
   siteNav?: React.ReactNode
   children: React.ReactNode
 }) => {
+  const { getLoginItems } = useLocaleData()
+
+  const loginItems = getLoginItems()
   return (
     <div className="w-full antialiased h-full">
       <header>
         <div className="bg-yellow">
           <div className="container flex justify-between items-center">
             <div className="flex justify-between items-center gap-x-3 py-3">
-              <a href="/">
+              <AccessibleLink id={'Homepage'} data={loginItems}>
                 <img
                   className="mx-auto"
                   src="/assets/images/logo/casa-dourada.webp"
@@ -22,7 +27,7 @@ const BaseTemplate = (props: {
                   width={90}
                   height={34}
                 />
-              </a>
+              </AccessibleLink>
               <nav>
                 <ul className="list-none flex flex-wrap text-xl">
                   {props.leftNav}
