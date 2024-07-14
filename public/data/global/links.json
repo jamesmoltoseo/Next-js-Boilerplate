@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Sportsbook",
+    "meta_title": "Description_and_titles_to_be_provided_by_writing_team.",
+    "meta_description": "Description_and_titles_to_be_provided_by_writing_team.",
+    "href": "/apostas-esportivas",
+    "site_nav_text": "apostas esportivas",
+    "label": "Visit Example Website",
+    "labelledby": "labelId1",
+    "describedby": "descriptionId1"
+  },
+  {
+    "id": "LiveCasino",
+    "meta_title": "Description_and_titles_to_be_provided_by_writing_team.",
+    "meta_description": "Description_and_titles_to_be_provided_by_writing_team.",
+    "href": "/cassino-ao-vivo",
+    "site_nav_text": "cassino ao vivo",
+    "label": "Visit Example Website",
+    "labelledby": "labelId1",
+    "describedby": "descriptionId1"
+  }
+]

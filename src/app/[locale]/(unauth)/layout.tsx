@@ -1,52 +1,47 @@
 import { useTranslations } from 'next-intl'
 import { Refresh } from '@mui/icons-material'
 import { BaseTemplate } from '@/templates/BaseTemplate'
-import Button from '@/components/tailwind-ui/reusable/buttons'
+import Button from '@/components/buttons'
+
+//** FIX: This list of pages should come from br.json.
+const siteNavItems = [
+  {
+    name: 'Sportsbook',
+  },
+  { name: 'LiveCasino' },
+  { name: 'CrashGames' },
+  { name: 'SlotGames' },
+  {
+    name: 'SportsExchange',
+  },
+] as const
+
+//** FIX: This list of pages should come from br.json.
+const loginItems = [
+  {
+    name: 'Login',
+  },
+  { name: 'Register' },
+] as const
 
 export default function Layout(props: { children: React.ReactNode }) {
   const t = useTranslations()
-  const mainPages = [
-    {
-      href: t('Sportsbook.href'),
-      text: t('Sportsbook.site_nav_text'),
-      image: '/assets/images/sitenav/apostas-esportivas.webp',
-    },
-    {
-      href: t('LiveCasino.href'),
-      text: t('LiveCasino.site_nav_text'),
-      image: '/assets/images/sitenav/cassino-ao-vivo.webp',
-    },
-    {
-      href: t('CrashGames.href'),
-      text: t('CrashGames.site_nav_text'),
-      image: '/assets/images/sitenav/jogos-de-crash.webp',
-    },
-    {
-      href: t('SlotGames.href'),
-      text: t('SlotGames.site_nav_text'),
-      image: '/assets/images/sitenav/caca-niqueis.webp',
-    },
-    {
-      href: t('SportsExchange.href'),
-      text: t('SportsExchange.site_nav_text'),
-      image: '/assets/images/sitenav/intercambio-esportivo.webp',
-    },
-  ]
-  const memberPages = [
-    {
-      href: t('Login.href'),
-      text: t('Login.site_nav_text'),
-    },
-    {
-      href: t('Register.href'),
-      text: t('Register.site_nav_text'),
-    },
-  ]
+
+  const siteNav = siteNavItems.map(({ name }) => ({
+    href: t(`${name}.href`),
+    text: t(`${name}.site_nav_text`),
+    image: t(`${name}.site_nav_icon`),
+  }))
+
+  const memberPages = loginItems.map(({ name }) => ({
+    href: t(`${name}.href`),
+    text: t(`${name}.site_nav_text`),
+  }))
 
   // Function to generate main nav items
   const generateMainNavItems = () => (
     <>
-      {mainPages.map((item, index) => (
+      {siteNav.map((item, index) => (
         <li key={index}>
           <Button
             size="xs"

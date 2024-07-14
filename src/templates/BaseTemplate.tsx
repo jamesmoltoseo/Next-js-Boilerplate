@@ -1,4 +1,5 @@
 import { AppConfig } from '@/utils/AppConfig'
+import Footer from 'src/components/tailwind-ui/reusable/footer'
 
 const BaseTemplate = (props: {
   leftNav: React.ReactNode
@@ -8,9 +9,9 @@ const BaseTemplate = (props: {
 }) => {
   return (
     <div className="w-full antialiased h-full">
-      <div className="mx-auto">
-        <header>
-          <div className="flex justify-between items-center bg-yellow px-3 sm:px-7">
+      <header>
+        <div className="bg-yellow">
+          <div className="container flex justify-between items-center">
             <div className="flex justify-between items-center gap-x-3 py-3">
               <a href="/">
                 <img
@@ -34,22 +35,22 @@ const BaseTemplate = (props: {
               </ul>
             </nav>
           </div>
-          <nav>
-            <ul className="temp-css hidden lg:flex list-none justify-center gap-x-5 pt-2.5 items-center">
-              {props.siteNav}
-            </ul>
-          </nav>
-        </header>
+        </div>
 
-        <main className="mx-auto lg:mt-2.5 w-full">
-          <div className="w-full">{props.children}</div>
-        </main>
+        <nav>
+          <ul className="temp-css hidden lg:flex list-none justify-center gap-x-5 pt-2.5 items-center">
+            {props.siteNav}
+          </ul>
+        </nav>
+      </header>
 
-        {/* border-t border-gray-300  */}
-        <footer className="py-8 text-center text-sm">
-          © Direitos Autorais {new Date().getFullYear()} {AppConfig.name}
-        </footer>
-      </div>
+      <main className="mx-auto lg:mt-2.5 w-full">
+        <div className="w-full">{props.children}</div>
+      </main>
+
+      <footer className="bg-neutral-800" aria-labelledby="footer-heading">
+        <Footer />
+      </footer>
     </div>
   )
 }

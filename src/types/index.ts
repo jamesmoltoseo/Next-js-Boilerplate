@@ -14,3 +14,9 @@ export interface Game {
     }[]
   }[]
 }
+
+export interface Page {
+  href: string
+  text: string
+  image?: string
+}

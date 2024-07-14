@@ -1,0 +1,16 @@
+[
+  {
+    "name": "1",
+    "heading": "casino",
+    "text": "Explore various Casino games,\ncard games on our platform.",
+    "imageUrl": "/assets/images/home/features/cassino-ofertas.webp",
+    "imageAlt": "casino offers"
+  },
+  {
+    "name": "2",
+    "heading": "sports",
+    "text": "All major sports games are\navailable on our platform.",
+    "imageUrl": "/assets/images/home/features/ofertas-esportivas.webp",
+    "imageAlt": "casino offers"
+  }
+]

@@ -1,3 +1,9 @@
+// From Tailwind UI Component: centered_accordion
+
+/** //** FIX: we need to be careful to preload and pre-render any data 
+ * (with static paths and props) 
+before using client side JS */
+
 'use client'
 
 import { Disclosure } from '@headlessui/react'

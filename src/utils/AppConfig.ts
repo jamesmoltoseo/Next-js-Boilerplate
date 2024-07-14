@@ -9,3 +9,5 @@ export const AppConfig = {
   defaultLocale: 'br',
   localePrefix,
 }
+
+export const BrandName = AppConfig.name

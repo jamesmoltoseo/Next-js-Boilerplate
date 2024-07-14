@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Sportsbook",
+    "image": "/assets/images/sitenav/apostas-esportivas.webp"
+  },
+  {
+    "name": "LiveCasino",
+    "image": "/assets/images/sitenav/cassino-ao-vivo.webp"
+  },
+  {
+    "name": "CrashGames",
+    "image": "/assets/images/sitenav/jogos-de-crash.webp"
+  },
+  { "name": "SlotGames", "image": "/assets/images/sitenav/caca-niqueis.webp" },
+  {
+    "name": "SportsExchange",
+    "image": "/assets/images/sitenav/intercambio-esportivo.webp"
+  }
+]

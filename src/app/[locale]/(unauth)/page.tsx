@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
-import FeatureImages from '@/components/tailwind-ui/reusable/feature-images/with_large_images'
-import CenteredAccordion from '@/components/tailwind-ui/reusable/accordion/centered_accordion'
+import FeatureImages from '@/components/tailwind-ui/reusable/feature-images'
+import CenteredAccordion from '@/components/tailwind-ui/reusable/accordion'
 import HighlightCasa from '@/components/utilities/TextManipulation/HighlightCasa'
 
 //** This data is for demo purposes - this data will come from Strapi */
@@ -37,7 +37,7 @@ export default function Homepage() {
       {/* about us */}
       <section id="2">
         {/* container, center and max width */}
-        <div className="container mx-auto max-w-sm sm:max-w-2xl">
+        <div className="container max-w-sm sm:max-w-2xl">
           {/* highlight 'casa' in green */}
           <HighlightCasa>
             {/* headings do not need css classes for responsive font sizing unless you want to override default */}
@@ -51,7 +51,7 @@ export default function Homepage() {
 
       {/* offers */}
       <section id="3" className="mb-3 md:mb-5">
-        <div className="container mx-auto max-w-sm sm:max-w-2xl">
+        <div className="container max-w-sm sm:max-w-2xl">
           {/* center items vertically and horizontally */}
           <div className="flex flex-col items-center justify-center">
             <h2>{textContent?.section_3?.heading}</h2>
@@ -65,7 +65,7 @@ export default function Homepage() {
 
       {/* faq */}
       <section id="4">
-        <div className="container mx-auto max-w-sm sm:max-w-full md:max-w-2xl lg:max-w-5xl text-center">
+        <div className="container max-w-sm sm:max-w-full md:max-w-2xl lg:max-w-5xl text-center">
           <h2>{textContent?.section_4?.heading}</h2>
           <div className="mt-6 sm:mt-8 lg:mt-15 lg:pt-2 text-left">
             <CenteredAccordion data={faqs} />

@@ -1,0 +1,7 @@
+[
+  { "name": "Sportsbook", "image": "apostas-esportivas.webp" },
+  { "name": "LiveCasino", "image": "cassino-ao-vivo.webp" },
+  { "name": "CrashGames", "image": "jogos-de-crash.webp" },
+  { "name": "SlotGames", "image": "caca-niqueis.webp" },
+  { "name": "SportsExchange", "image": "intercambio-esportivo.webp" }
+]

@@ -1,19 +1,6 @@
-const features = [
-  {
-    id: '1',
-    heading: 'casino',
-    text: 'Explore various Casino games,\ncard games on our platform.',
-    imageUrl: '/assets/images/home/features/cassino-ofertas.webp',
-    imageAlt: 'casino offers',
-  },
-  {
-    id: '2',
-    heading: 'sports',
-    text: 'All major sports games are\navailable on our platform.',
-    imageUrl: '/assets/images/home/features/ofertas-esportivas.webp',
-    imageAlt: 'casino offers',
-  },
-]
+// From Tailwind UI Component: with_large_images
+
+import features from 'public/data/home/features.json'
 
 export default function FeatureImages() {
   return (
@@ -25,7 +12,7 @@ export default function FeatureImages() {
         >
           {features.map((feature) => (
             <li
-              key={feature.id}
+              key={feature.name}
               className="block relative rounded-md overflow-hidden border border-neutral-700 cursor-pointer opacity-80 hover:opacity-100 ease-linear duration-200"
             >
               <img

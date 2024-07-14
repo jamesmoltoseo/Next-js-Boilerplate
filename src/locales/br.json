@@ -36,31 +36,36 @@
     "meta_title": "Description_and_titles_to_be_provided_by_writing_team.",
     "meta_description": "Description_and_titles_to_be_provided_by_writing_team.",
     "href": "/apostas-esportivas",
-    "site_nav_text": "apostas esportivas"
+    "site_nav_text": "apostas esportivas",
+    "site_nav_icon": "/assets/images/sitenav/apostas-esportivas.webp"
   },
   "LiveCasino": {
     "meta_title": "Description_and_titles_to_be_provided_by_writing_team.",
     "meta_description": "Description_and_titles_to_be_provided_by_writing_team.",
     "href": "/cassino-ao-vivo",
-    "site_nav_text": "cassino ao vivo"
+    "site_nav_text": "cassino ao vivo",
+    "site_nav_icon": "/assets/images/sitenav/cassino-ao-vivo.webp"
   },
   "CrashGames": {
     "meta_title": "Description_and_titles_to_be_provided_by_writing_team.",
     "meta_description": "Description_and_titles_to_be_provided_by_writing_team.",
     "href": "/jogos-de-crash",
-    "site_nav_text": "jogos de crash"
+    "site_nav_text": "jogos de crash",
+    "site_nav_icon": "/assets/images/sitenav/jogos-de-crash.webp"
   },
   "SlotGames": {
     "meta_title": "Description_and_titles_to_be_provided_by_writing_team.",
     "meta_description": "Description_and_titles_to_be_provided_by_writing_team.",
     "href": "/caca-niqueis",
-    "site_nav_text": "caça-niqueis"
+    "site_nav_text": "caça-niqueis",
+    "site_nav_icon": "/assets/images/sitenav/caca-niqueis.webp"
   },
   "SportsExchange": {
     "meta_title": "Description_and_titles_to_be_provided_by_writing_team.",
     "meta_description": "Description_and_titles_to_be_provided_by_writing_team.",
     "href": "/intercambio-esportivo",
-    "site_nav_text": "intercâmbio esportivo"
+    "site_nav_text": "intercâmbio esportivo",
+    "site_nav_icon": "/assets/images/sitenav/intercambio-esportivo.webp"
   },
   "Dashboard": {
     "meta_title": "Description_and_titles_to_be_provided_by_writing_team.",
