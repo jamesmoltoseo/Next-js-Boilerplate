@@ -1,47 +1,17 @@
-import { useTranslations } from 'next-intl'
-import { Refresh } from '@mui/icons-material'
 import { BaseTemplate } from '@/templates/BaseTemplate'
+import { useLocaleData } from '@/components/utilities/LocaleData'
+import { Refresh } from '@mui/icons-material'
 import Button from '@/components/buttons'
 
-//** FIX: This list of pages should come from br.json.
-const siteNavItems = [
-  {
-    name: 'Sportsbook',
-  },
-  { name: 'LiveCasino' },
-  { name: 'CrashGames' },
-  { name: 'SlotGames' },
-  {
-    name: 'SportsExchange',
-  },
-] as const
-
-//** FIX: This list of pages should come from br.json.
-const loginItems = [
-  {
-    name: 'Login',
-  },
-  { name: 'Register' },
-] as const
-
 export default function Layout(props: { children: React.ReactNode }) {
-  const t = useTranslations()
-
-  const siteNav = siteNavItems.map(({ name }) => ({
-    href: t(`${name}.href`),
-    text: t(`${name}.site_nav_text`),
-    image: t(`${name}.site_nav_icon`),
-  }))
-
-  const memberPages = loginItems.map(({ name }) => ({
-    href: t(`${name}.href`),
-    text: t(`${name}.site_nav_text`),
-  }))
+  const { getSiteNavItems, getLoginItems } = useLocaleData()
+  const siteNavItems = getSiteNavItems()
+  const loginItems = getLoginItems()
 
   // Function to generate main nav items
   const generateMainNavItems = () => (
     <>
-      {siteNav.map((item, index) => (
+      {siteNavItems.map((item, index) => (
         <li key={index}>
           <Button
             size="xs"
@@ -65,7 +35,7 @@ export default function Layout(props: { children: React.ReactNode }) {
   // Function to generate member nav items
   const generateMemberNavItems = () => (
     <>
-      {memberPages.map((item, index) => (
+      {loginItems.map((item, index) => (
         <li key={index} className="-ml-2">
           <Button
             size="lg"
